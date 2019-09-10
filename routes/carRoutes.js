@@ -25,10 +25,10 @@ router.get('/:id', (req, res) => {
 });
 
 router.post('/', (req, res) => {
-    const { VIN, make, model, mileage } = req.body;
+    const { VIN, make, model, mileage, transmission, titleStatus } = req.body;
 
     if (
-        typeof VIN === 'number'
+        typeof VIN === 'string'
         && typeof make === 'string'
         && typeof model === 'string'
         && typeof mileage === 'number'
